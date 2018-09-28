@@ -1,0 +1,7 @@
+High-level steps to create app-training
+
+1 - Create app-training directory and required files
+2 - Install bootstrap using Angular CLI
+3 - Create view1 component
+4 - Create view2 component
+5 - Create the AppRoutingModule

@@ -1,0 +1,19 @@
+<form [formGroup]="nameForm" (ngSubmit)="onSubmit()">
+  
+    <label>
+      Nombre:
+      <input type="text" formControlName="firstName" required> 
+    </label>
+  
+    <label>
+      Apellido:
+      <input type="text" formControlName="lastName" required>
+    </label>
+  
+  </form>
+
+  <button type="submit" [disabled]="!nameForm.valid">Enviar (placeholder)</button>
+
+  <p>
+      Form Status: {{ nameForm.status }}
+  </p>
