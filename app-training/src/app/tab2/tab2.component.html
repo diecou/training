@@ -1,18 +1,22 @@
 <h1>Feriados</h1>
 <div>
-<table  style="width:100%">
-<tr>
-  <th>Motivo</th>
-  <th>Tipo</th>
-  <th>Dia</th>
-  <th>Mes</th>
-</tr>
-<!--<tr *ngFor="let feriado of feriados">
-    <td> { { feriado.motivo } } </td>
-    <td> { { feriado.tipo } } </td>
-    <td> { { feriado.dia } } </td>
-    <td> { { feriado.mes } } </td> 
-</tr>-->
+<table class="table table-bordered table-hover" style="width:100%">
+    <thead class="thead-dark">
+      <tr>
+        <th>Motivo</th>
+        <th>Tipo</th>
+        <th>Dia</th>
+        <th>Mes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let feriado of feriados">
+        <td> {{ feriado.motivo }} </td>
+        <td> {{ feriado.tipo }} </td>
+        <td> {{ feriado.dia }} </td>
+        <td> {{ feriado.mes }} </td> 
+      </tr>
+    </tbody>
 </table>
     
 </div>

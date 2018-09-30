@@ -8,6 +8,7 @@ import { Validators } from '@angular/forms'; // Importar Validators para realiza
   templateUrl: './name-editor.component.html',
   styleUrls: ['./name-editor.component.css']
 })
+
 export class NameEditorComponent implements OnInit {
 
   nameForm = this.fb.group({                       // FormGroup alternative: profileForm = new FormGroup({

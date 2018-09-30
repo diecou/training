@@ -1,19 +1,29 @@
-<form [formGroup]="nameForm" (ngSubmit)="onSubmit()">
-  
-    <label>
-      Nombre:
-      <input type="text" formControlName="firstName" required> 
-    </label>
-  
-    <label>
-      Apellido:
-      <input type="text" formControlName="lastName" required>
-    </label>
-  
-  </form>
-
-  <button type="submit" [disabled]="!nameForm.valid">Enviar (placeholder)</button>
-
-  <p>
-      Form Status: {{ nameForm.status }}
-  </p>
+    <div class="form">
+  <form [formGroup]="nameForm" (ngSubmit)="onSubmit()">
+      <div class="form-group row">
+        <label for="inputName" class="col-sm-2 col-form-label">Nombre</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" placeholder="Ingrese su nombre" formControlName="firstName" required>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="inputName" class="col-sm-2 col-form-label">Apellido</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" placeholder="Ingrese su apellido" formControlName="lastName" required>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-12">
+          <button type="submit" class="btn btn-primary" [disabled]="!nameForm.valid">Enviar</button>
+        </div>
+      </div>
+      <div class="error-message">
+          <div *ngIf="!nameForm.valid" class="cross-validation-error-message alert alert-danger">
+              Form Status: {{ nameForm.status }}<br/>Completar ambos
+          </div>
+          <div *ngIf="nameForm.valid" class="cross-validation-error-message alert alert-success">
+              Form Status: {{ nameForm.status }}
+          </div>
+        </div>
+    </form>
+  </div>

@@ -1,8 +1,12 @@
-<h2>Vista 2</h2>
-<div>
-  <tabset>
-    <tab heading="Tab 1" id="tab1" routerLink="/tab1"></tab>
-    <tab heading="Tab 2" id="tab2" routerLink="/tab2"></tab>
-  </tabset>
+<div class="vista">
+  <h2>Vista 2</h2>
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/view2/tab1']" routerLinkActive="active">Tab 1</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/view2/tab2']" routerLinkActive="active">Tab 2</a>
+    </li>
+  </ul>
+  <router-outlet></router-outlet>
 </div>
-<router-outlet></router-outlet>
